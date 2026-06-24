@@ -1,0 +1,266 @@
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap");
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+:root {
+	/* Warm Obsidian Base */
+	--bg: #151111;
+	--bg-card: #1c1515;
+	--bg-skill: #261618;
+	--bg-tag: #241a1a;
+	--border: #332424;
+	--border-sub: #211717;
+	--border-skill: #522a30;
+
+	/* Rose-tinted Neutrals */
+	--text: #f5ebeb;
+	--text-dim: #c7b5b5;
+	--text-muted: #8a7777;
+	--text-dead: #473737;
+	--text-tag: #ab9696;
+
+	/* Dark Pastel Red Palette */
+	--red-main: #49221f; /* Soft Guava Red */
+	--red-link: #d97782; /* Muted Rose */
+	--red-link-h: #f2a2ab; /* Pale Blush */
+	--red-status: #e58b75; /* Pastel Terracotta */
+	--red-skill: #df8e9d; /* Soft Mauve-Pink */
+
+	--font: "Cascadia Code", monospace;
+}
+
+body {
+	background: var(--bg);
+	color: var(--text);
+	font-family: var(--font);
+	min-height: 100vh;
+	-webkit-font-smoothing: antialiased;
+}
+
+.root {
+	max-width: 860px;
+	margin: 0 auto;
+}
+
+.hero {
+	padding: 1.5rem 2.5rem 1rem;
+}
+
+.name {
+	font-size: 2rem;
+	font-weight: 700;
+	letter-spacing: -0.5px;
+	color: var(--text);
+	margin-bottom: 0.25rem;
+}
+
+.tagline {
+	font-size: 13px;
+	color: var(--text-muted);
+	display: flex;
+	align-items: center;
+	gap: 0;
+}
+
+.status {
+	display: inline-block;
+	width: 7px;
+	height: 7px;
+	border-radius: 50%;
+	background: var(--red-status);
+	margin-right: 6px;
+	flex-shrink: 0;
+	animation: blink 2s ease-in-out infinite;
+}
+
+@keyframes blink {
+	0%,
+	100% {
+		opacity: 1;
+	}
+	50% {
+		opacity: 0.3;
+	}
+}
+
+.links {
+	display: flex;
+	gap: 1rem;
+	margin-top: 1.25rem;
+	flex-wrap: wrap;
+}
+
+.link {
+	font-size: 12px;
+	font-family: var(--font);
+	color: var(--red-link);
+	text-decoration: none;
+	display: flex;
+	align-items: center;
+	gap: 5px;
+	transition: color 0.15s;
+}
+
+.link:hover {
+	color: var(--red-link-h);
+}
+
+.section {
+	padding: 1rem 2.5rem;
+}
+
+.section-label {
+	font-size: 14px;
+	font-weight: 800;
+	color: var(--text-dim);
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+	margin-bottom: 1.25rem;
+}
+
+.about {
+	font-size: 13px;
+	color: var(--text-dim);
+	line-height: 1.75;
+	max-width: 560px;
+}
+
+.about-accent {
+	color: var(--red-link);
+}
+
+.grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+	gap: 12px;
+}
+
+.card {
+	background: var(--bg-card);
+	border: 1px solid var(--border);
+	border-radius: 6px;
+	padding: 1rem 1.1rem;
+	cursor: default;
+	transition: border-color 0.15s;
+}
+
+.card:hover {
+	border-color: var(--red-main);
+}
+
+.card-lang {
+	font-size: 11px;
+	color: var(--red-status);
+	margin-bottom: 0.4rem;
+}
+
+.card-name {
+	font-size: 14px;
+	font-weight: 700;
+	color: var(--text);
+	margin-bottom: 0.3rem;
+}
+
+.card-desc {
+	font-size: 12px;
+	color: var(--text-muted);
+	line-height: 1.5;
+}
+
+.card-tags {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 6px;
+	margin-top: 0.75rem;
+}
+
+.tag {
+	font-size: 10px;
+	font-family: var(--font);
+	background: var(--bg-tag);
+	color: var(--text-tag);
+	padding: 2px 8px;
+	border-radius: 3px;
+}
+
+.skills {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px;
+}
+
+.skill {
+	font-size: 12px;
+	font-family: var(--font);
+	color: var(--red-skill);
+	padding: 4px 12px;
+	border: 1px solid var(--border-skill);
+	border-radius: 4px;
+	background: var(--bg-skill);
+}
+
+.footer {
+	padding: 1rem 2.5rem;
+	font-size: 11px;
+	color: var(--text-dead);
+}
+
+.hero-inner {
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+	gap: 2.5rem;
+}
+
+.hero-content {
+	flex-shrink: 0;
+}
+
+.hero-calendar {
+	flex-shrink: 0;
+	padding-top: 4rem;
+}
+
+.hero-calendar-label {
+	font-size: 11px;
+	color: var(--red-main);
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+	margin-bottom: 0.75rem;
+}
+
+@media (max-width: 640px) {
+	.hero-inner {
+		flex-direction: column;
+		gap: 1.75rem;
+	}
+
+	.hero-calendar {
+		padding-top: 0;
+		width: 100%;
+		overflow-x: auto;
+	}
+}
+
+@media (max-width: 480px) {
+	.hero,
+	.section,
+	.footer {
+		padding-left: 1.25rem;
+		padding-right: 1.25rem;
+	}
+
+	.name {
+		font-size: 1.5rem;
+	}
+
+	.grid {
+		grid-template-columns: 1fr;
+	}
+}
