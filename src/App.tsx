@@ -2,7 +2,7 @@ import "./App.css";
 import Hero from "./components/Hero";
 import Projects from "./components/Projects";
 import Stack from "./components/Stack";
-import { Analytics } from "@vercel/analytics/next";
+import { Analytics } from "@vercel/analytics/react";
 
 const About = () => (
 	<section className="section">
