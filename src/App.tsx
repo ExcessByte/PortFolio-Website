@@ -2,6 +2,7 @@ import "./App.css";
 import Hero from "./components/Hero";
 import Projects from "./components/Projects";
 import Stack from "./components/Stack";
+import { Analytics } from "@vercel/analytics/next";
 
 const About = () => (
 	<section className="section">
@@ -23,6 +24,7 @@ const App = () => (
 		<About />
 		<Projects />
 		<Stack />
+		<Analytics />
 	</div>
 );
 
