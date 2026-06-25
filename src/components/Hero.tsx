@@ -9,7 +9,7 @@ const lastHalfYear = (contributions: Activity[]): Activity[] => {
 };
 
 const calendarTheme = {
-	dark: ["#1a1a1a", "#0f2a1a", "#1b5c30", "#268c48", "#42be65"],
+	dark: ["#1c1515", "#3a1d21", "#693037", "#9c4953", "#e06c75"],
 };
 
 const Hero = () => (
