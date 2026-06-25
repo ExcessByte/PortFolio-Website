@@ -51,7 +51,7 @@ const Hero = () => (
 				</nav>
 			</div>
 
-			<div className="-hero-calendar">
+			<div className="hero-calendar">
 				<GitHubCalendar
 					username={GITHUB_USERNAME}
 					transformData={lastHalfYear}
